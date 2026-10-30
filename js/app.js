@@ -147,3 +147,14 @@ for(let i=0;i<students.length;i++){
     }
     console.log(i);
 }
+
+
+function sleepIn(weekday, vacation){
+    if(!weekday || vacation){
+        return true;
+    }
+}
+
+console.log(sleepIn(false, false));
+console.log(sleepIn(true,false));
+console.log(sleepIn(false,true));
