@@ -139,6 +139,7 @@ if(!firstNumber == !secondNumber){
 }
 **/
 
+/*
 let students = ["Ieva", "Justina", "Ana", "Gabija"];
 for(let i=0;i<students.length;i++){
     if(students[i] == "Ana"){
@@ -158,3 +159,180 @@ function sleepIn(weekday, vacation){
 console.log(sleepIn(false, false));
 console.log(sleepIn(true,false));
 console.log(sleepIn(false,true));
+**/
+/*
+setTimeout(function (){
+    console.log("Praejo 1 s");
+}, 10000);
+
+setTimeout(function (){
+    alert("Reklama");
+}, 10000);
+**/
+
+/* 
+const countAverage = (grades)=>{
+    console.log("Pazymiai: ")
+    console.log(grades)
+}
+
+countAverage([10,7,8,9,8,7])
+**/
+/*
+const countAverage = (...grades)=>{
+    // sudeti pazymius
+    //padalinti is pazymiu skaiciaus
+    let sum = 0;
+    
+    for(let grade of grades){
+    sum += grade}
+   /*
+    grades.forEach((grade)=> sum += grade)
+
+    return grades/grades.length;
+    **/
+   /*
+   return sum/grades.length
+
+}
+
+console.log(countAverage(10,7,8,9,8,7,5,6))
+**/
+
+/*
+const findNumber = (target, ...number) =>
+    {
+        console.log(number)
+        for(let i = 0; i < number.length; ++i)
+            {
+                if(target === number[i])
+                    {
+                        return number.indexOf(target)
+                    }
+                else
+                    {
+                        return -1
+                    }
+            }
+    }
+    console.log(findNumber(27, 12, 5, 27, 9))
+**/
+/*
+const words = ["Java", "javascript", "Python", "JSON", "HTML"];
+const countWordsStartingWith = (letter, ...words) => {
+    let count = 0;
+
+    for (let i = 0; i < words.length; i++) {
+        if (words[i][0] == letter || words[i][0] == letter.toUpperCase()) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+console.log(("J raidziu"), countWordsStartingWith("j", ...words));
+
+const countEvenNumbers = (...numbers) =>{
+    let sum = 0;
+    for (let i=0; i< numbers.length; i++){
+        if(numbers[i] % 2 === 0)
+        {
+            sum ++
+        }
+    }
+    return sum
+}
+
+console.log(countEvenNumbers(3,8,12,5,7,20))
+**/
+/*
+const getRandom = (max)=>{
+    return Math.floor(Math.random() * max)
+    //floor - islieka tik pries kableli skaicius
+    // max - maximali reiksme
+    //apvalinimas - round - floor - ceil -
+}
+
+
+console.log(getRandom(100))
+
+// getRandom(skaicius) - skaicius max reiksme
+**/
+/*
+const getDate = ()=>{
+    const date = new Date(); // date objektas
+
+    return date.getTime()
+}
+
+console.log(getDate())
+**/
+/*
+const getDate = ()=>{
+    const date = new Date(); // date objektas
+    
+    return new Date(date) // normali data
+}
+
+console.log(getDate())
+**/
+const getDate = ()=>{
+    const date = new Date(); // date objektas
+    const newDate = new Date(date).setFullYear(2027)
+
+    return new Date(newDate).getUTCFullYear()
+}
+
+console.log(getDate())
+
+const checkName = (name, names)=>{
+    if(names.includes(name)){
+        return `Surasta: ${name}`;
+    }else{
+        return "Not found"
+    }
+}
+
+console.log(checkName("Justina", ["Monika", "Ieva", "Kristina", "Justina"]));
+
+
+const toArrayConverter = (text) =>{
+    return text.split(":");
+}
+
+const toStringConverter = (array)=>{
+    return array.join(",")
+}
+
+console.log(toArrayConverter("Labas:rytas:suraitytas"))
+
+console.log(toStringConverter(["Andrius", "Ieva", "Monika"]))
+
+
+/*
+const words = ["JavaScript", "Python", "Java", "TypeScript"];
+const countWordsContaining = (searchText, ...words) =>{
+    let count = 0;
+    for (let word of words) {
+        if (word.toLowerCase().includes(searchText.toLowerCase())) {
+            count++;
+        }
+    }
+    return count;
+}
+
+console.log(("Script zodziu"), countWordsContaining("Script", ...words));
+**/
+
+
+const files = ["logo.PNG", "notes.txt", "photo.jpg", "image.svg"];
+const findImageFiles = (...fileNames)=>{
+    let count = 0;
+    if(fileNames.endsWith(".png") || fileNames.endWith(".jpg")){
+        count++
+    }
+    return count
+}
+
+console.log(findImageFiles(...files));
